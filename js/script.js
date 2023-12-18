@@ -38,7 +38,7 @@ window.onscroll = () => {
 
 // scroll reveal 
 ScrollReveal({
-    // reset: true,
+    // reset: tru e,
     distance: '80px',
     duration: 2000,
     delay: 200
@@ -48,3 +48,13 @@ ScrollReveal().reveal('.home-content, .heading', {origin: 'top'});
 ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', {origin: 'bottom'});
 ScrollReveal().reveal('.home-content h1, .about-img', {origin: 'left'});
 ScrollReveal().reveal('.home-content p, .about-content', {origin: 'right'});
+
+
+// typed js 
+const typed = new Typed('.multiple-text', {
+    strings: ['Data Analyst', 'Virtual Assistant', 'Forex Trader'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+})
