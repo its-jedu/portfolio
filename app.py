@@ -19,8 +19,8 @@ def submit_form():
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
 
-        email_address = 'olajide.adebanjo06@gmail.com'
-        email_password = 'Jedu1122'
+        email_address = os.environ.get('EMAIL_ADDRESS')
+        email_password = os.environ.get('EMAIL_PASSWORD')
         server.login(email_address, email_password)
 
         # Compose the email
