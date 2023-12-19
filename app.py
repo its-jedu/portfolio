@@ -15,7 +15,7 @@ def submit_form():
         email_subject = request.form['email_subject']
         message = request.form['message']
 
-        # Set up the email server
+        # Setting up the email server
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
 
@@ -23,7 +23,7 @@ def submit_form():
         email_password = os.environ.get('EMAIL_PASSWORD')
         server.login(email_address, email_password)
 
-        # Compose the email
+        # Composing the email
         msg = MIMEMultipart()
         msg['From'] = email_address
         msg['To'] = 'olajide.adebanjo06@gmail.com'
@@ -32,7 +32,7 @@ def submit_form():
         body = f"Name: {full_name}\nEmail: {email}\nPhone Number: {phone_number}\nSubject: {email_subject}\nMessage: {message}"
         msg.attach(MIMEText(body, 'plain'))
 
-        # Send the email
+        # Sendeing the email
         server.sendmail(email_address, 'olajide.adebanjo06@gmail.com', msg.as_string())
         server.quit()
 
