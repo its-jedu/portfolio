@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/submit-form', methods=['POST'])
+@app.route('/submit', methods=['POST'])
 def submit_form():
     try:
         full_name = request.form['full_name']
